@@ -44,11 +44,11 @@ enum keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [DEF] = LAYOUT(
-        KC_GRV,     KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                               KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       XXXXXXX,    
-        KC_TAB,     KC_B,       KC_Y,       KC_O,       KC_U,       KC_QUOT,                            KC_SCLN,    KC_L,       KC_D,       KC_W,       KC_V,       KC_Z, 
-        KC_ESC,     KC_C,       KC_I,       KC_E,       KC_A,       KC_COMM,                            KC_DOT,     KC_H,       KC_T,       KC_S,       KC_N,       KC_Q, 
-        KC_LSFT,    KC_G,       KC_X,       KC_J,       KC_K,       KC_MINS,    KC_DEL,     XXXXXXX,    KC_SLSH,    KC_R,       KC_M,       KC_F,       KC_P,       KC_RSFT, 
-                                                        LA_MOD,     KC_SPACE,   KC_BSPC,    LA_SYM,     KC_ENTER,   LA_NUM
+        KC_GRV,             KC_1,       KC_2,       KC_3,       KC_4,       KC_5,                               KC_6,       KC_7,       KC_8,       KC_9,       KC_0,       XXXXXXX,    
+        LALT_T(KC_TAB),     KC_B,       KC_Y,       KC_O,       KC_U,       KC_QUOT,                            KC_SCLN,    KC_L,       KC_D,       KC_W,       KC_V,       KC_Z, 
+        LCTL_T(KC_ESC),     KC_C,       KC_I,       KC_E,       KC_A,       KC_COMM,                            KC_DOT,     KC_H,       KC_T,       KC_S,       KC_N,       KC_Q, 
+        KC_LSFT,            KC_G,       KC_X,       KC_J,       KC_K,       KC_MINS,    KC_DEL,     XXXXXXX,    KC_SLSH,    KC_R,       KC_M,       KC_F,       KC_P,       KC_RSFT, 
+                                                                LA_MOD,     KC_SPACE,   KC_BSPC,    LA_SYM,     KC_ENTER,   LA_NUM
     ),
 
     [SYM] = LAYOUT(
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [MOD] = LAYOUT(
-        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,                            XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    
+        KC_F12,     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                              KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,     KC_F11,    
         XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_UP,      XXXXXXX,    XXXXXXX,                            XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX, 
         XXXXXXX,    XXXXXXX,    KC_LEFT,    KC_DOWN,    KC_RIGHT,   XXXXXXX,                            XXXXXXX,    OS_CTRL,    OS_ALT,     OS_WIN,     OS_SHFT,    XXXXXXX, 
         XXXXXXX,    LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    LSFT(KC_TAB), KC_LALT,  KC_TAB,     KC_LWIN,    XXXXXXX, 
@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NUM] = LAYOUT(
         XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,                            XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    
         XXXXXXX,    XXXXXXX,    KC_KP_1,    KC_KP_2,    KC_KP_3,    KC_NUM,                             XXXXXXX,    KC_F1,      KC_F2,      KC_F3,      KC_F4,      XXXXXXX, 
-        XXXXXXX,    XXXXXXX,    KC_KP_4,    KC_KP_5,    KC_KP_6,    KC_KP_0,                            XXXXXXX,    KC_F5,      KC_F6,      KC_F7,      KC_F8,      XXXXXXX, 
-        XXXXXXX,    XXXXXXX,    KC_KP_7,    KC_KP_8,    KC_KP_9,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_F9,      KC_F10,     KC_F11,     KC_F12,     XXXXXXX, 
-                                                        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
+        XXXXXXX,    KC_DOT,     KC_KP_4,    KC_KP_5,    KC_KP_6,    KC_KP_0,                            XXXXXXX,    KC_F5,      KC_F6,      KC_F7,      KC_F8,      XXXXXXX, 
+        XXXXXXX,    XXXXXXX,    KC_KP_7,    KC_KP_8,    KC_KP_9,    XXXXXXX,    KC_DEL,     XXXXXXX,    XXXXXXX,    KC_F9,      KC_F10,     KC_F11,     KC_F12,     XXXXXXX, 
+                                                        XXXXXXX,    KC_SPACE,   KC_BSPC,    XXXXXXX,    KC_ENTER,   XXXXXXX
     ),
 };
 
